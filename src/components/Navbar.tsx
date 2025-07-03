@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
@@ -17,14 +18,16 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Viby
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">About</Button>
+            <Link to="/about">
+              <Button variant="ghost" size="sm">About</Button>
+            </Link>
             <Button variant="ghost" size="sm">Features</Button>
             <Button variant="ghost" size="sm">Pricing</Button>
             <Button variant="glass" size="sm" onClick={toggleTheme}>
@@ -48,7 +51,9 @@ export const Navbar = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2 animate-fade-in">
-            <Button variant="ghost" className="w-full justify-start">About</Button>
+            <Link to="/about" className="block">
+              <Button variant="ghost" className="w-full justify-start">About</Button>
+            </Link>
             <Button variant="ghost" className="w-full justify-start">Features</Button>
             <Button variant="ghost" className="w-full justify-start">Pricing</Button>
             <Button variant="glow" className="w-full">Get Started</Button>
