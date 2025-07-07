@@ -150,12 +150,12 @@ export default function Onboarding() {
 
   const handleFinish = () => {
     toast({
-      title: "Welcome to Viby! 🎉",
-      description: "Your account has been set up successfully. Let's start creating amazing content!",
+      title: "Setup Complete! 🎉",
+      description: "Your account is now configured. Let's explore Viby together!",
     });
     
-    // Redirect to dashboard
-    window.location.href = '/dashboard';
+    // Redirect to welcome page
+    window.location.href = '/dashboard/welcome';
   };
 
   return (

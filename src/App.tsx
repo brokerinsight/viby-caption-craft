@@ -13,6 +13,8 @@ import SignUp from "./pages/auth/SignUp";
 import Login from "./pages/auth/Login";
 import ResetPassword from "./pages/auth/ResetPassword";
 import Onboarding from "./pages/dashboard/Onboarding";
+import Welcome from "./pages/dashboard/Welcome";
+import Tour from "./pages/dashboard/Tour";
 import { DashboardLayout } from "./components/dashboard/DashboardLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 
@@ -36,6 +38,8 @@ const App = () => (
           <Route path="/onboarding" element={<Onboarding />} />
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
+            <Route path="welcome" element={<Welcome />} />
+            <Route path="tour" element={<Tour />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

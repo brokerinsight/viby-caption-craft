@@ -79,8 +79,8 @@ export default function SignUp() {
       description: "Welcome to Viby! Let's get you started.",
     });
     
-    // Redirect to onboarding
-    window.location.href = '/onboarding';
+    // Redirect to welcome page
+    window.location.href = '/dashboard/welcome';
   };
 
   const resendOTP = async () => {
