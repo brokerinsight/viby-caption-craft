@@ -108,3 +108,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Glass card component */
+.glass-card {
+  @apply bg-gradient-glass backdrop-blur-md border border-glass-border;
+}
