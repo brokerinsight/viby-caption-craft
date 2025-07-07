@@ -12,6 +12,9 @@ import NotFound from "./pages/NotFound";
 import SignUp from "./pages/auth/SignUp";
 import Login from "./pages/auth/Login";
 import ResetPassword from "./pages/auth/ResetPassword";
+import Onboarding from "./pages/dashboard/Onboarding";
+import { DashboardLayout } from "./components/dashboard/DashboardLayout";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +33,10 @@ const App = () => (
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<Dashboard />} />
+          </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
